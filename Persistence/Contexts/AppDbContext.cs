@@ -15,7 +15,6 @@ namespace CodersHomeAPI.Persistence.Contexts
             builder.Entity<Category>().ToTable("Categories");
             builder.Entity<Category>().HasKey(p => p.Id);
             builder.Entity<Category>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
-            builder.Entity<Category>().Property(p => p.ParentID);
             builder.Entity<Category>().Property(p => p.Name).IsRequired().HasMaxLength(30);
             builder.Entity<Category>().HasData
             (
